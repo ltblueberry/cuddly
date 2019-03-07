@@ -1,5 +1,4 @@
 #!/bin/bash
-TRAVIS_BRANCH=$1
 echo "Testing ""$TRAVIS_BRANCH"" branch"
 
 # Check 'master' branch
