@@ -1,0 +1,5 @@
+dist: trusty
+sudo: required
+language: bash
+before_install:
+  - bash test.sh
