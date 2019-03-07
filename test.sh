@@ -1,5 +1,5 @@
 #!/bin/bash
-
+TRAVIS_BRANCH=$1
 echo "Testing ""$TRAVIS_BRANCH"" branch"
 
 # Check 'master' branch
@@ -12,11 +12,5 @@ fi
 if [ "$TRAVIS_BRANCH" == "play-travis" ]; then
 	cd play-travis
 	echo "Run python test.py in play-travis directory"
-	RESULT="$(python test.py)"
-	VALID="$("${RESULT}" | grep -o 'failing')"
-	if [ "$VALID" != "FAILED" ]; then
-    	exit 0
-	else
-    	exit 1
-	fi
+	python test.py
 fi
