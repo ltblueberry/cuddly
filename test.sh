@@ -2,7 +2,7 @@
 echo "Testing ""$TRAVIS_BRANCH"" branch"
 
 # Check 'master' branch
-if [ "$TRAVIS_BRANCH" == "" ]; then
+if [ "$TRAVIS_BRANCH" == "master" ]; then
 	echo "We don't have tests for master branch"
 	exit 0
 fi
